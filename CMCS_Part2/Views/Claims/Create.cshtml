@@ -1,0 +1,96 @@
+﻿@model Claim
+@{
+    ViewData["Title"] = "Submit New Claim";
+    var culture = new System.Globalization.CultureInfo("en-ZA");
+}
+
+<h2>Submit New Claim</h2>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["ErrorMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="HoursWorked" class="form-label fw-bold"></label>
+                        <input asp-for="HoursWorked" class="form-control" />
+                        <span asp-validation-for="HoursWorked" class="text-danger"></span>
+                        <small class="form-text text-muted">Enter total hours worked this month</small>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="HourlyRate" class="form-label fw-bold"></label>
+                        <div class="input-group">
+                            <span class="input-group-text">R</span>
+                            <input asp-for="HourlyRate" class="form-control" />
+                        </div>
+                        <span asp-validation-for="HourlyRate" class="text-danger"></span>
+                        <small class="form-text text-muted">Your agreed hourly rate</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Notes" class="form-label fw-bold"></label>
+                <textarea asp-for="Notes" class="form-control" rows="4" placeholder="Optional: Add any notes about this claim..."></textarea>
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-4">
+                <label class="form-label fw-bold">Supporting Document</label>
+                <input type="file" name="supportingDocument" class="form-control"
+                       accept=".pdf,.docx,.xlsx" />
+                <small class="form-text text-muted">
+                    Allowed formats: PDF, DOCX, XLSX (Maximum 5MB)
+                </small>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="fas fa-paper-plane"></i> Submit Claim
+                </button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Back to My Claims</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card bg-light">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Claim Information</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    <strong>Submission Date:</strong><br>
+                    @DateTime.Now.ToString("dd MMMM yyyy")
+                </p>
+                <p class="card-text">
+                    <strong>Current Status:</strong><br>
+                    <span class="badge bg-warning">Pending</span>
+                </p>
+                <p class="card-text">
+                    <strong>Approval Process:</strong><br>
+                    Your claim will be reviewed by the Programme Coordinator and Academic Manager.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
