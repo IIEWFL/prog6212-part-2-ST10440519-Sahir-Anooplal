@@ -1,0 +1,115 @@
+﻿@model IEnumerable<Claim>
+@{
+    ViewData["Title"] = "All Claims Overview";
+    var culture = new System.Globalization.CultureInfo("en-ZA");
+}
+
+<h2>All Claims Overview</h2>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <p class="mb-0 text-muted">Complete overview of all claims in the system.</p>
+    <div>
+        <a href="@Url.Action("Index")" class="btn btn-warning btn-sm">Pending Claims</a>
+        <a href="@Url.Action("Index", "Home")" class="btn btn-outline-secondary btn-sm">Back to Home</a>
+    </div>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        No claims found in the system.
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Claim ID</th>
+                    <th>Lecturer</th>
+                    <th>Submission Date</th>
+                    <th>Hours</th>
+                    <th>Rate</th>
+                    <th>Total Amount</th>
+                    <th>Status</th>
+                    <th>Documents</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>#@item.Id</td>
+                        <td>@item.Lecturer?.Name</td>
+                        <td>@item.SubmissionDate.ToString("dd/MM/yyyy")</td>
+                        <td>@item.HoursWorked</td>
+                        <td>@item.HourlyRate.ToString("C", culture)</td>
+                        <td class="fw-bold">@item.TotalAmount.ToString("C", culture)</td>
+                        <td>
+                            <span class="badge @GetStatusBadgeClass(item.Status)">@item.Status</span>
+                        </td>
+                        <td>
+                            @if (item.SupportingDocuments.Any())
+                            {
+                                <span class="badge bg-info">@item.SupportingDocuments.Count</span>
+                            }
+                            else
+                            {
+                                <span class="text-muted">-</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary">
+                <div class="card-body text-center">
+                    <h4>@Model.Count()</h4>
+                    <p class="mb-0">Total Claims</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning">
+                <div class="card-body text-center">
+                    <h4>@Model.Count(c => c.Status == ClaimStatus.Pending)</h4>
+                    <p class="mb-0">Pending</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success">
+                <div class="card-body text-center">
+                    <h4>@Model.Count(c => c.Status == ClaimStatus.Approved)</h4>
+                    <p class="mb-0">Approved</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-danger">
+                <div class="card-body text-center">
+                    <h4>@Model.Count(c => c.Status == ClaimStatus.Rejected)</h4>
+                    <p class="mb-0">Rejected</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@functions {
+    string GetStatusBadgeClass(ClaimStatus status)
+    {
+        return status switch
+        {
+            ClaimStatus.Pending => "bg-warning",
+            ClaimStatus.Approved => "bg-success",
+            ClaimStatus.Rejected => "bg-danger",
+            _ => "bg-secondary"
+        };
+    }
+}
