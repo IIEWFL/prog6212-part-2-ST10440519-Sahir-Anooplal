@@ -1,8 +1,46 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Contract Monthly Claim System";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <span></span>
+        <h1 class="display-4">Welcome to CMCS</h1>
+        <div>
+            <small>Logged in as: <strong>@ViewData["CurrentUserName"]</strong></small>
+            <a href="@Url.Action("Logout")" class="btn btn-sm btn-outline-secondary ms-2">Switch User</a>
+        </div>
+    </div>
+
+    <p class="lead">Contract Monthly Claim System</p>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Lecturer Portal</h5>
+                    <p class="card-text">Submit new claims and track your existing claims.</p>
+                    <a href="@Url.Action("Index", "Claims")" class="btn btn-primary">Manage My Claims</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Programme Coordinator</h5>
+                    <p class="card-text">Verify and approve pending claims from lecturers.</p>
+                    <a href="@Url.Action("Index", "Approval")" class="btn btn-warning">Review Claims</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Manage Lecturers</h5>
+                    <p class="card-text">Add or edit lecturer information in the system.</p>
+                    <a href="@Url.Action("Index", "Lecturer")" class="btn btn-info">Lecturer Management</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

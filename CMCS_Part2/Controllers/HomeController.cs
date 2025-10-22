@@ -1,32 +1,48 @@
-using System.Diagnostics;
-using CMCS_Part2.Models;
 using Microsoft.AspNetCore.Mvc;
+using CMCS_Part2.Services;
+using CMCS_Part2.Models;
 
 namespace CMCS_Part2.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IUserService _userService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IUserService userService)
         {
-            _logger = logger;
+            _userService = userService;
         }
 
         public IActionResult Index()
         {
+            var currentUser = _userService.GetCurrentLecturer();
+            if (currentUser == null)
+            {
+                // Redirect to user selection if no user is set
+                return RedirectToAction("SelectUser");
+            }
+
+            ViewData["CurrentUserName"] = currentUser.Name;
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult SelectUser()
         {
-            return View();
+            var lecturers = _userService.GetAllLecturers();
+            return View(lecturers);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult SelectUser(int lecturerId)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            _userService.SetCurrentLecturer(lecturerId);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("SelectUser");
         }
     }
 }

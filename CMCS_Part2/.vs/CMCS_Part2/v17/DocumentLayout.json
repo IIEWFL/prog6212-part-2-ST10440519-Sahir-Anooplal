@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|c:\\users\\lab_services_student\\downloads\\prog6212-part-2-st10440519-sahir-anooplal\\cmcs_part2\\views\\lecturer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|solutionrelative:views\\lecturer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|c:\\users\\lab_services_student\\downloads\\prog6212-part-2-st10440519-sahir-anooplal\\cmcs_part2\\views\\home\\selectuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|solutionrelative:views\\home\\selectuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|c:\\users\\lab_services_student\\downloads\\prog6212-part-2-st10440519-sahir-anooplal\\cmcs_part2\\views\\lecturer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|solutionrelative:views\\lecturer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|c:\\users\\lab_services_student\\downloads\\prog6212-part-2-st10440519-sahir-anooplal\\cmcs_part2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|c:\\users\\lab_services_student\\downloads\\prog6212-part-2-st10440519-sahir-anooplal\\cmcs_part2\\views\\lecturer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|solutionrelative:views\\lecturer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|c:\\users\\lab_services_student\\downloads\\prog6212-part-2-st10440519-sahir-anooplal\\cmcs_part2\\controllers\\lecturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|solutionrelative:controllers\\lecturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|c:\\users\\lab_services_student\\downloads\\prog6212-part-2-st10440519-sahir-anooplal\\cmcs_part2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|c:\\users\\lab_services_student\\downloads\\prog6212-part-2-st10440519-sahir-anooplal\\cmcs_part2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|c:\\users\\lab_services_student\\downloads\\prog6212-part-2-st10440519-sahir-anooplal\\cmcs_part2\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|c:\\users\\lab_services_student\\downloads\\prog6212-part-2-st10440519-sahir-anooplal\\cmcs_part2\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6D56D1F-37A2-432D-946A-1552DA34CBA6}|CMCS_Part2.csproj|solutionrelative:services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,84 +31,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Views\\Lecturer\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\Lecturer\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Views\\Lecturer\\Edit.cshtml",
-              "RelativeToolTip": "Views\\Lecturer\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "Title": "SelectUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Views\\Home\\SelectUser.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\SelectUser.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Views\\Home\\SelectUser.cshtml",
+              "RelativeToolTip": "Views\\Home\\SelectUser.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-22T12:18:12.305Z",
+              "WhenOpened": "2025-10-22T12:25:15.909Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Views\\Lecturer\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Lecturer\\Create.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Views\\Lecturer\\Create.cshtml",
-              "RelativeToolTip": "Views\\Lecturer\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-22T12:17:02.451Z",
+              "WhenOpened": "2025-10-22T12:24:23.919Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Views\\Lecturer\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Lecturer\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Views\\Lecturer\\Index.cshtml",
-              "RelativeToolTip": "Views\\Lecturer\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-22T12:16:00.533Z",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T12:23:38.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LecturerController.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Controllers\\LecturerController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LecturerController.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Controllers\\LecturerController.cs",
-              "RelativeToolTip": "Controllers\\LecturerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T12:14:16.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T12:11:37.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Services\\IUserService.cs",
-              "RelativeDocumentMoniker": "Services\\IUserService.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Services\\IUserService.cs",
-              "RelativeToolTip": "Services\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T12:10:51.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Downloads\\prog6212-part-2-ST10440519-Sahir-Anooplal\\CMCS_Part2\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
