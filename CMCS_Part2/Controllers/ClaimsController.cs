@@ -12,17 +12,17 @@ namespace CMCS_Part2.Controllers
 
         public ClaimsController(CMCSDbContext context, IUserService userService)
         {
-            _context = context;
-            _userService = userService;
+            _context = context; // [1]
+            _userService = userService; // [2]
         }
 
         // GET: Claims - Shows list of claims for the CURRENT lecturer
         public async Task<IActionResult> Index()
         {
-            var currentLecturer = _userService.GetCurrentLecturer();
+            var currentLecturer = _userService.GetCurrentLecturer(); 
             if (currentLecturer == null)
             {
-                return RedirectToAction("SelectUser", "Home");
+                return RedirectToAction("SelectUser", "Home"); // [3]
             }
 
             var claims = await _context.Claims
@@ -30,21 +30,21 @@ namespace CMCS_Part2.Controllers
                 .Include(c => c.SupportingDocuments)
                 .Where(c => c.LecturerId == currentLecturer.Id)
                 .OrderByDescending(c => c.SubmissionDate)
-                .ToListAsync();
+                .ToListAsync(); // [4]
 
             ViewData["CurrentLecturer"] = currentLecturer;
-            return View(claims);
+            return View(claims); // [5]
         }
 
         // GET: Claims/Create - Show claim submission form
         public IActionResult Create()
         {
-            var currentLecturer = _userService.GetCurrentLecturer();
+            var currentLecturer = _userService.GetCurrentLecturer(); 
             if (currentLecturer == null)
             {
-                return RedirectToAction("SelectUser", "Home");
+                return RedirectToAction("SelectUser", "Home"); // [3]
             }
-            return View();
+            return View(); // [5]
         }
 
         // POST: Claims/Create - Handle claim submission
@@ -52,31 +52,31 @@ namespace CMCS_Part2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Claim claim, IFormFile? supportingDocument)
         {
-            var currentLecturer = _userService.GetCurrentLecturer();
+            var currentLecturer = _userService.GetCurrentLecturer(); 
             if (currentLecturer == null)
             {
-                return RedirectToAction("SelectUser", "Home");
+                return RedirectToAction("SelectUser", "Home"); // [3]
             }
 
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) // [6]
             {
                 // Set lecturer ID from current user
                 claim.LecturerId = currentLecturer.Id;
                 claim.Status = ClaimStatus.Pending;
 
-                _context.Add(claim);
-                await _context.SaveChangesAsync();
+                _context.Add(claim); // [7]
+                await _context.SaveChangesAsync(); // [8]
 
                 // Handle file upload if present
                 if (supportingDocument != null && supportingDocument.Length > 0)
                 {
-                    await HandleFileUpload(supportingDocument, claim.Id);
+                    await HandleFileUpload(supportingDocument, claim.Id); // [9]
                 }
 
                 TempData["SuccessMessage"] = "Claim submitted successfully!";
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index)); // [3]
             }
-            return View(claim);
+            return View(claim); // [5]
         }
 
         private async Task HandleFileUpload(IFormFile file, int claimId)
@@ -110,7 +110,7 @@ namespace CMCS_Part2.Controllers
 
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
-                await file.CopyToAsync(stream);
+                await file.CopyToAsync(stream); // [9]
             }
 
             // Save document info to database
@@ -121,8 +121,20 @@ namespace CMCS_Part2.Controllers
                 ClaimId = claimId
             };
 
-            _context.SupportingDocuments.Add(document);
-            await _context.SaveChangesAsync();
+            _context.SupportingDocuments.Add(document); // [7]
+            await _context.SaveChangesAsync(); // [8]
         }
     }
 }
+
+/*
+[1] Microsoft Docs. "Dependency injection in ASP.NET Core." https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection
+[2] Microsoft Docs. "Interfaces (C# Programming Guide)." https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/
+[3] Microsoft Docs. "Controller.RedirectToAction Method." https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.controller.redirecttoaction
+[4] Microsoft Docs. "ToListAsync Method (Entity Framework Core)." https://learn.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.entityframeworkqueryableextensions.tolistasync
+[5] Microsoft Docs. "Controller.View Method." https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.controller.view
+[6] Microsoft Docs. "ModelState.IsValid Property." https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.controller.modelstate
+[7] Microsoft Docs. "DbContext.Add Method." https://learn.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbcontext.add
+[8] Microsoft Docs. "DbContext.SaveChangesAsync Method." https://learn.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesasync
+[9] Microsoft Docs. "IFormFile.CopyToAsync Method." https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile.copytoasync
+*/

@@ -14,7 +14,7 @@ namespace CMCS_Part2.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Seed one example lecturer
+            // Example lecturer
             modelBuilder.Entity<Lecturer>().HasData(
                 new Lecturer { Id = 1, Name = "Dr. Tom Hanson", Email = "tom.hanson@university.com" }
             );

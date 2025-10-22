@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(); // [1]
 
 // Add DbContext with InMemory database
 builder.Services.AddDbContext<CMCSDbContext>(options =>
-    options.UseInMemoryDatabase("CMCSDatabase"));
+    options.UseInMemoryDatabase("CMCSDatabase")); // [2]
 
 // Add session for user management
 builder.Services.AddDistributedMemoryCache();
@@ -46,3 +46,8 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+/*
+[1] Microsoft Docs. "Controllers with Views in ASP.NET Core." https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/views
+[2] Microsoft Docs. "UseInMemoryDatabase Method (Entity Framework Core)." https://learn.microsoft.com/en-us/ef/core/providers/in-memory/
+*/
